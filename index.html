@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cyber Members — Discord Member Growth & Injection Infrastructure</title>
+  <meta name="description" content="Discover Cyber Members: The premier Discord community and automated OAuth2 member injection platform featuring tiered quotas, real-time token pool delivery, and high-velocity server growth.">
+  <link rel="icon" type="image/jpeg" href="assets/badge.jpg">
+  
+  <!-- Modern Google Fonts: Outfit (Display), Plus Jakarta Sans (Body), JetBrains Mono (Terminal/Code) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Outfit:wght@500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="cyber-theme">
+  <!-- Ambient background glow elements -->
+  <div class="ambient-glow glow-top-left" aria-hidden="true"></div>
+  <div class="ambient-glow glow-bottom-right" aria-hidden="true"></div>
+  <div class="cyber-grid-overlay" aria-hidden="true"></div>
+
+  <!-- Navigation Bar -->
+  <header class="cyber-header" id="header">
+    <div class="header-inner container">
+      <a href="#hero" class="brand-group" id="brand-link" aria-label="Cyber Members Home">
+        <div class="brand-badge-wrap">
+          <img src="assets/badge.jpg" alt="Cyber Members Logo" class="brand-badge-img" width="42" height="42">
+          <div class="badge-pulse-ring"></div>
+        </div>
+        <div class="brand-text">
+          <span class="brand-name">CYBER MEMBERS</span>
+          <span class="brand-status"><span class="status-dot"></span> LIVE NETWORK</span>
+        </div>
+      </a>
+
+      <nav class="cyber-nav" id="main-nav" aria-label="Main Navigation">
+        <ul class="nav-list">
+          <li><a href="#features" class="nav-link">Architecture</a></li>
+          <li><a href="#tiers" class="nav-link">Tier Quotas</a></li>
+          <li><a href="#simulator" class="nav-link">Interactive Terminal</a></li>
+          <li><a href="#commands" class="nav-link">Bot Commands</a></li>
+          <li><a href="#faq" class="nav-link">FAQ</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button id="sound-toggle-btn" class="icon-toggle-btn" title="Toggle UI sound effects" aria-label="Toggle Cyber Sound Effects">
+          <svg class="sound-icon sound-on" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path></svg>
+          <svg class="sound-icon sound-off hidden" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><line x1="23" y1="9" x2="17" y2="15"></line><line x1="17" y1="9" x2="23" y2="15"></line></svg>
+        </button>
+
+        <a href="https://discord.gg/VX4APpF" target="_blank" rel="noopener noreferrer" class="btn btn-discord" id="nav-discord-btn">
+          <svg class="discord-svg-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994.021-.041.001-.09-.041-.106a13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.929 1.793 8.18 1.793 12.061 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.894.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.028zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/>
+          </svg>
+          <span>Join Server</span>
+        </a>
+
+        <button class="mobile-menu-toggle" id="mobile-menu-btn" aria-label="Toggle navigation menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="cyber-hero" id="hero">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="hero-eyebrow">
+            <span class="eyebrow-chip">DISCORD GROWTH INFRASTRUCTURE</span>
+            <span class="eyebrow-divider">|</span>
+            <span class="eyebrow-highlight">OAUTH2 INJECTION ENGINE</span>
+          </div>
+
+          <h1 class="hero-title">
+            Automated Discord <span class="gradient-text">Member Injection</span> &amp; Tier Quotas
+          </h1>
+
+          <p class="hero-subtitle">
+            Scale your community with high-velocity OAuth2 injection, calibrated rate pacing, and tiered allowance controls from Member to Emerald.
+          </p>
+
+          <div class="hero-actions">
+            <a href="https://discord.gg/VX4APpF" target="_blank" rel="noopener noreferrer" class="btn btn-primary" id="hero-join-cta">
+              <svg class="btn-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"></path><polyline points="10 17 15 12 10 7"></polyline><line x1="15" y1="12" x2="3" y2="12"></line></svg>
+              <span>Join Cyber Members</span>
+              <span class="btn-arrow">→</span>
+            </a>
+
+            <a href="#simulator" class="btn btn-secondary" id="hero-sim-cta">
+              <svg class="btn-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
+              <span>Launch Live Simulator</span>
+            </a>
+          </div>
+
+          <!-- Telemetry Specs Bar -->
+          <div class="telemetry-bar">
+            <div class="telemetry-item">
+              <span class="telemetry-label">DISCORD API</span>
+              <span class="telemetry-val">REST v10 OAuth2</span>
+            </div>
+            <div class="telemetry-separator"></div>
+            <div class="telemetry-item">
+              <span class="telemetry-label">JOIN RATE</span>
+              <span class="telemetry-val">&lt; 1.2s / member</span>
+            </div>
+            <div class="telemetry-separator"></div>
+            <div class="telemetry-item">
+              <span class="telemetry-label">PRIVILEGED INTENTS</span>
+              <span class="telemetry-val text-success">Zero Required</span>
+            </div>
+            <div class="telemetry-separator"></div>
+            <div class="telemetry-item">
+              <span class="telemetry-label">OFFICIAL INVITE</span>
+              <span class="telemetry-val text-cyan">discord.gg/VX4APpF</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual-col">
+          <div class="hero-visual-card" id="hero-visual">
+            <div class="visual-frame">
+              <img src="assets/hero.jpg" alt="Cyber Members Discord Network Topology" class="hero-img" id="hero-img">
+              <div class="scanline"></div>
+              
+              <!-- Floating HUD Data Pills -->
+              <div class="hud-pill hud-pill-top">
+                <span class="hud-dot"></span>
+                <span class="hud-text">TOKEN POOL HEALTH: <strong>100% ONLINE</strong></span>
+              </div>
+              <div class="hud-pill hud-pill-bottom">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span class="hud-text">DYNAMIC QUOTA SYNC ACTIVE</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Architecture & Features Bento -->
+    <section class="cyber-section" id="features">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Engineered for Stealth, Speed &amp; Precision</h2>
+          <p class="section-desc">A deep dive into how Cyber Members maintains high-velocity server injection without sacrificing security or triggering rate limits.</p>
+        </div>
+
+        <div class="bento-grid">
+          <!-- Card 1: Token Pipeline -->
+          <div class="bento-card bento-col-8">
+            <div class="bento-badge">ARCHITECTURE</div>
+            <h3 class="bento-heading">OAuth2 Smart Ingestion Pipeline</h3>
+            <p class="bento-text">
+              Members authenticate via official Discord OAuth2 links with automatic token rotation. The bot automatically manages refresh tokens, purges dead accounts, and routes verified tokens directly to your target guilds.
+            </p>
+            <div class="pipeline-visual">
+              <div class="pipe-node">
+                <span class="pipe-icon">🔑</span>
+                <span class="pipe-name">OAuth2 Grant</span>
+                <span class="pipe-sub">`!get_token`</span>
+              </div>
+              <div class="pipe-connector">
+                <span class="pipe-arrow">➔</span>
+                <span class="pipe-label">Crypto Refresh</span>
+              </div>
+              <div class="pipe-node">
+                <span class="pipe-icon">🛡️</span>
+                <span class="pipe-name">Pool Cache</span>
+                <span class="pipe-sub">Token Registry</span>
+              </div>
+              <div class="pipe-connector">
+                <span class="pipe-arrow">➔</span>
+                <span class="pipe-label">Anti-Flood Curve</span>
+              </div>
+              <div class="pipe-node highlight">
+                <span class="pipe-icon">🚀</span>
+                <span class="pipe-name">Guild Injection</span>
+                <span class="pipe-sub">`!djoin`</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2: Intent-Free Bot Core -->
+          <div class="bento-card bento-col-4">
+            <div class="bento-badge">STABILITY</div>
+            <h3 class="bento-heading">Zero Privileged Intents</h3>
+            <p class="bento-text">
+              Built on standard message content and member events without requiring Discord developer portal approvals, preventing bot verification lockouts.
+            </p>
+            <div class="status-metric-box">
+              <div class="metric-number text-cyan">0%</div>
+              <div class="metric-label">Privileged Permissions Needed</div>
+              <div class="metric-sub">Runs seamlessly in 1 to 500+ servers</div>
+            </div>
+          </div>
+
+          <!-- Card 3: Calibrated Join Curve -->
+          <div class="bento-card bento-col-4">
+            <div class="bento-badge">DEFENSE</div>
+            <h3 class="bento-heading">Adaptive Rate Pacing</h3>
+            <p class="bento-text">
+              Dynamic join intervals between 1.0s and 2.5s avoid Discord edge-router suspicion, cloudflare captcha walls, and instantaneous guild suspension.
+            </p>
+            <div class="rate-chart-preview">
+              <div class="chart-bar" style="height: 35%"></div>
+              <div class="chart-bar" style="height: 60%"></div>
+              <div class="chart-bar" style="height: 85%"></div>
+              <div class="chart-bar" style="height: 55%"></div>
+              <div class="chart-bar" style="height: 100%"></div>
+              <div class="chart-bar" style="height: 70%"></div>
+            </div>
+          </div>
+
+          <!-- Card 4: Multi-Tier Quota Enforcement -->
+          <div class="bento-card bento-col-8">
+            <div class="bento-badge">ACCESS CONTROL</div>
+            <h3 class="bento-heading">Hierarchical Role Quota Engine</h3>
+            <p class="bento-text">
+              Role IDs mapped directly into the bot runtime. Each command execution checks tier seniority in real time via Discord REST API before releasing member batches into target server IDs.
+            </p>
+            <div class="tier-pill-row">
+              <span class="tier-chip chip-member">Member: 5</span>
+              <span class="tier-chip chip-bronze">Bronze: 7</span>
+              <span class="tier-chip chip-silver">Silver: 10</span>
+              <span class="tier-chip chip-gold">Gold: 12</span>
+              <span class="tier-chip chip-booster">Booster: 15</span>
+              <span class="tier-chip chip-premium">Premium: 20</span>
+              <span class="tier-chip chip-diamond">Diamond: 30</span>
+              <span class="tier-chip chip-emerald">Emerald: 40</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Membership Tier Table & Allowance Matrix -->
+    <section class="cyber-section" id="tiers">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Membership Tier Hierarchy</h2>
+          <p class="section-desc">Unlock higher join quotas and faster injection cycles as you level up your role within the Cyber Members Discord.</p>
+        </div>
+
+        <div class="tiers-grid" id="tier-cards-container">
+          <!-- Dynamic / Static tier cards loaded with authentic limits -->
+          <div class="tier-card" data-tier="member">
+            <div class="tier-header">
+              <div class="tier-role-badge badge-member">MEMBER</div>
+              <div class="tier-quota-count">5 <span class="quota-unit">Members</span></div>
+            </div>
+            <p class="tier-tagline">Starter quota available to all verified community members upon join.</p>
+            <ul class="tier-perks">
+              <li><span class="perk-check">✓</span> 5 Member Injection Allowance</li>
+              <li><span class="perk-check">✓</span> Access to `!profile` &amp; `!stock`</li>
+              <li><span class="perk-check">✓</span> Automated Token Health Sync</li>
+              <li><span class="perk-cross">✗</span> Priority Dispatch Queue</li>
+            </ul>
+            <div class="tier-action">
+              <a href="https://discord.gg/VX4APpF" target="_blank" rel="noopener noreferrer" class="btn btn-tier">Join for Role</a>
+            </div>
+          </div>
+
+          <div class="tier-card" data-tier="bronze">
+            <div class="tier-header">
+              <div class="tier-role-badge badge-bronze">BRONZE</div>
+              <div class="tier-quota-count">7 <span class="quota-unit">Members</span></div>
+            </div>
+            <p class="tier-tagline">Early community supporter tier with expanded member injections.</p>
+            <ul class="tier-perks">
+              <li><span class="perk-check">✓</span> 7 Member Injection Allowance</li>
+              <li><span class="perk-check">✓</span> Real-Time Progress Bar Tracking</li>
+              <li><span class="perk-check">✓</span> OAuth2 Refresh Compatibility</li>
+              <li><span class="perk-cross">✗</span> Priority Dispatch Queue</li>
+            </ul>
+            <div class="tier-action">
+              <a href="https://discord.gg/VX4APpF" target="_blank" rel="noopener noreferrer" class="btn btn-tier">Get Bronze</a>
+            </div>
+          </div>
+
+          <div class="tier-card" data-tier="gold">
+            <div class="tier-header">
+              <div class="tier-role-badge badge-gold">GOLD</div>
+              <div class="tier-quota-count">12 <span class="quota-unit">Members</span></div>
+            </div>
+            <p class="tier-tagline">Proven growth tier for burgeoning community servers and testing.</p>
+            <ul class="tier-perks">
+              <li><span class="perk-check">✓</span> 12 Member Injection Allowance</li>
+              <li><span class="perk-check">✓</span> Low-latency REST execution</li>
+              <li><span class="perk-check">✓</span> Server ID Bypass Ingestion</li>
+              <li><span class="perk-check">✓</span> Dynamic Progress UI</li>
+            </ul>
+            <div class="tier-action">
+              <a href="https://discord.gg/VX4APpF" target="_blank" rel="noopener noreferrer" class="btn btn-tier">Get Gold</a>
+            </div>
+          </div>
+
+          <!-- Featured Tier: Premium / Booster -->
+          <div class="tier-card featured" data-tier="premium">
+            <div class="featured-ribbon">MOST POPULAR</div>
+            <div class="tier-header">
+              <div class="tier-role-badge badge-premium">PREMIUM / BOOSTER</div>
+              <div class="tier-quota-count">20 <span class="quota-unit">Members</span></div>
+            </div>
+            <p class="tier-tagline">Dedicated quota with 15 (Booster) or 20 (Premium) concurrent additions.</p>
+            <ul class="tier-perks">
+              <li><span class="perk-check">✓</span> 20 Member Instant Injection</li>
+              <li><span class="perk-check">✓</span> Priority Token Pool Dispatch</li>
+              <li><span class="perk-check">✓</span> Adaptive Anti-Flood Pacing</li>
+              <li><span class="perk-check">✓</span> Real-Time Auth Logging Channel</li>
+            </ul>
+            <div class="tier-action">
+              <a href="https://discord.gg/VX4APpF" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-tier-featured">Unlock Premium</a>
+            </div>
+          </div>
+
+          <div class="tier-card" data-tier="diamond">
+            <div class="tier-header">
+              <div class="tier-role-badge badge-diamond">DIAMOND</div>
+              <div class="tier-quota-count">30 <span class="quota-unit">Members</span></div>
+            </div>
+            <p class="tier-tagline">High-volume injection power for accelerating Discord visibility.</p>
+            <ul class="tier-perks">
+              <li><span class="perk-check">✓</span> 30 Member Injection Allowance</li>
+              <li><span class="perk-check">✓</span> Sub-second injection intervals</li>
+              <li><span class="perk-check">✓</span> Dedicated Bot Execution Channels</li>
+              <li><span class="perk-check">✓</span> Priority Database Allocation</li>
+            </ul>
+            <div class="tier-action">
+              <a href="https://discord.gg/VX4APpF" target="_blank" rel="noopener noreferrer" class="btn btn-tier">Get Diamond</a>
+            </div>
+          </div>
+
+          <div class="tier-card highlight-emerald" data-tier="emerald">
+            <div class="tier-header">
+              <div class="tier-role-badge badge-emerald">EMERALD</div>
+              <div class="tier-quota-count">40 <span class="quota-unit">Members</span></div>
+            </div>
+            <p class="tier-tagline">Apex tier quota for serious server administrators and growth hackers.</p>
+            <ul class="tier-perks">
+              <li><span class="perk-check">✓</span> 40 Member Injection Allowance</li>
+              <li><span class="perk-check">✓</span> Highest Non-Staff Quota Limit</li>
+              <li><span class="perk-check">✓</span> Direct Token Cache Pipeline</li>
+              <li><span class="perk-check">✓</span> VIP Server Showcase Status</li>
+            </ul>
+            <div class="tier-action">
+              <a href="https://discord.gg/VX4APpF" target="_blank" rel="noopener noreferrer" class="btn btn-tier btn-emerald">Get Emerald</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="staff-tier-banner">
+          <div class="staff-badge">STAFF &amp; ADMIN ACCESS</div>
+          <div class="staff-info">
+            <strong>Head of Staff (100 Members)</strong> &amp; <strong>Admin / Owner (200 Members)</strong> tier quotas are available for server leadership and verified platform moderators.
+          </div>
+          <a href="https://discord.gg/VX4APpF" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">Contact Staff on Discord</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Terminal & Live Injection Simulator -->
+    <section class="cyber-section dark-alt" id="simulator">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Live Injection Simulator &amp; Terminal</h2>
+          <p class="section-desc">Test drive the Cyber Members Discord bot right here in your browser. Configure your tier, enter a server ID, and watch the real injection algorithm in action.</p>
+        </div>
+
+        <div class="simulator-layout">
+          <!-- Simulator Controls -->
+          <div class="sim-controls-panel">
+            <h3 class="panel-title">1. Configure Test Parameters</h3>
+
+            <div class="control-group">
+              <label for="sim-tier-select" class="control-label">Select Simulated Role Tier</label>
+              <div class="tier-selector-pills" id="tier-pill-selector">
+                <button type="button" class="sim-pill" data-tier-val="member" data-quota="5">Member (5)</button>
+                <button type="button" class="sim-pill" data-tier-val="bronze" data-quota="7">Bronze (7)</button>
+                <button type="button" class="sim-pill" data-tier-val="silver" data-quota="10">Silver (10)</button>
+                <button type="button" class="sim-pill" data-tier-val="gold" data-quota="12">Gold (12)</button>
+                <button type="button" class="sim-pill" data-tier-val="booster" data-quota="15">Booster (15)</button>
+                <button type="button" class="sim-pill active" data-tier-val="premium" data-quota="20">Premium (20)</button>
+                <button type="button" class="sim-pill" data-tier-val="diamond" data-quota="30">Diamond (30)</button>
+                <button type="button" class="sim-pill" data-tier-val="emerald" data-quota="40">Emerald (40)</button>
+              </div>
+            </div>
+
+            <div class="control-group">
+              <label for="target-server-input" class="control-label">Destination Server Snowflake ID</label>
+              <div class="input-with-button">
+                <input type="text" id="target-server-input" class="cyber-input" value="1560942690961723412" placeholder="e.g. 1560942690961723412">
+                <button type="button" class="input-preset-btn" id="use-default-guild-btn" title="Set to Cyber Members Server ID">Our Server</button>
+              </div>
+              <span class="input-hint">ID of guild where bot has join authorization permission.</span>
+            </div>
+
+            <div class="control-group">
+              <div class="slider-header">
+                <label for="member-count-slider" class="control-label">Member Batch Size</label>
+                <span class="slider-val-badge" id="slider-display-val">20 Members</span>
+              </div>
+              <input type="range" id="member-count-slider" min="1" max="40" value="20" class="cyber-slider">
+              <div class="slider-limits">
+                <span>Min: 1</span>
+                <span id="tier-max-limit">Max for Tier: 20</span>
+              </div>
+            </div>
+
+            <div class="sim-actions-group">
+              <button type="button" class="btn btn-primary btn-block" id="run-simulation-btn">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                <span>Execute `!djoin` Simulation</span>
+              </button>
+              <button type="button" class="btn btn-secondary btn-block" id="reset-sim-btn">Clear Terminal</button>
+            </div>
+
+            <div class="quick-commands-box">
+              <span class="quick-label">Or Run Instant Commands:</span>
+              <div class="quick-chips">
+                <button type="button" class="chip-cmd" data-cmd="!profile">!profile</button>
+                <button type="button" class="chip-cmd" data-cmd="!stock">!stock</button>
+                <button type="button" class="chip-cmd" data-cmd="!help">!help</button>
+                <button type="button" class="chip-cmd" data-cmd="!get_token">!get_token</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Terminal Screen -->
+          <div class="terminal-screen-container">
+            <div class="terminal-chrome">
+              <div class="terminal-dots">
+                <span class="dot dot-red"></span>
+                <span class="dot dot-yellow"></span>
+                <span class="dot dot-green"></span>
+              </div>
+              <div class="terminal-title">cyber-members-bot@gateway-v10:~ #</div>
+              <div class="terminal-network-badge">CONNECTED (48ms)</div>
+            </div>
+
+            <div class="terminal-body" id="terminal-output" role="log" aria-live="polite">
+              <div class="terminal-line text-muted">[2026-10-17 12:45:00] Initialized Cyber Members REST Gateway v10</div>
+              <div class="terminal-line text-cyan">🎯 Bot is ready: Cyber Members#0831 (ID: 1560947449474973706)</div>
+              <div class="terminal-line">✅ Token pool validated: 840+ verified member entries ready</div>
+              <div class="terminal-line text-muted">────────────────────────────────────────────────────────────</div>
+              <div class="terminal-line">Type a command or click "Execute `!djoin` Simulation" to begin.</div>
+            </div>
+
+            <!-- Terminal Input bar -->
+            <form class="terminal-input-bar" id="term-input-form">
+              <span class="term-prompt">user@cybermembers:~$</span>
+              <input type="text" id="term-cmd-input" class="term-input" placeholder="Type !djoin, !profile, !stock, or !help..." autocomplete="off">
+              <button type="submit" class="term-send-btn" aria-label="Send Command">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bot Command Reference -->
+    <section class="cyber-section" id="commands">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Command Reference</h2>
+          <p class="section-desc">Comprehensive list of commands available inside the Cyber Members Discord server.</p>
+        </div>
+
+        <div class="commands-grid">
+          <div class="command-card">
+            <div class="command-name-row">
+              <code class="command-syntax">!djoin &lt;server_id&gt;</code>
+              <span class="command-type-badge">CORE</span>
+            </div>
+            <p class="command-desc">Injects your allotted tier member quota into the destination server ID with adaptive rate limiting and progress telemetry.</p>
+            <div class="command-example"><strong>Example:</strong> `!djoin 1560942690961723412`</div>
+          </div>
+
+          <div class="command-card">
+            <div class="command-name-row">
+              <code class="command-syntax">!profile</code>
+              <span class="command-type-badge">STATUS</span>
+            </div>
+            <p class="command-desc">Checks your authentication state, identified Discord role tier from the guild, and available member injection quota.</p>
+            <div class="command-example"><strong>Aliases:</strong> `!me`, `!tier`, `!myquota`</div>
+          </div>
+
+          <div class="command-card">
+            <div class="command-name-row">
+              <code class="command-syntax">!get_token</code>
+              <span class="command-type-badge">AUTH</span>
+            </div>
+            <p class="command-desc">Generates an authorized OAuth2 link with an interactive Discord Link Button for single-click token authentication.</p>
+            <div class="command-example"><strong>Option A:</strong> Recommended method with auto-refresh.</div>
+          </div>
+
+          <div class="command-card">
+            <div class="command-name-row">
+              <code class="command-syntax">!auth &lt;code&gt;</code>
+              <span class="command-type-badge">AUTH</span>
+            </div>
+            <p class="command-desc">Submits the OAuth2 grant callback code returned from Discord to register your member account into the active pool.</p>
+            <div class="command-example"><strong>Syntax:</strong> `!auth 4Q7yL...`</div>
+          </div>
+
+          <div class="command-card">
+            <div class="command-name-row">
+              <code class="command-syntax">!check_tokens</code>
+              <span class="command-type-badge">UTILITY</span>
+            </div>
+            <p class="command-desc">Scans the global token database, verifying valid authorizations, active refresh tokens, and available stock capacity.</p>
+            <div class="command-example"><strong>Alias:</strong> `!stock`</div>
+          </div>
+
+          <div class="command-card">
+            <div class="command-name-row">
+              <code class="command-syntax">!servers</code>
+              <span class="command-type-badge">SERVER</span>
+            </div>
+            <p class="command-desc">Renders an interactive paginated view of all Discord guilds currently connected to the Cyber Members bot infrastructure.</p>
+            <div class="command-example"><strong>UI:</strong> Includes Previous &amp; Next navigation buttons.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Official Discord Server Showcase Card & CTA -->
+    <section class="cyber-section discord-showcase-section" id="community">
+      <div class="container">
+        <div class="discord-hero-card">
+          <div class="discord-card-left">
+            <div class="server-avatar-wrap">
+              <img src="assets/badge.jpg" alt="Cyber Members Discord Icon" class="server-avatar-img">
+              <div class="server-online-badge"></div>
+            </div>
+            <div class="server-details">
+              <span class="server-pill">OFFICIAL DISCORD COMMUNITY</span>
+              <h2 class="server-title">Cyber Members</h2>
+              <div class="server-meta">
+                <span class="meta-item"><span class="meta-dot"></span> <strong>Online &amp; Active</strong></span>
+                <span class="meta-sep">•</span>
+                <span class="meta-item">Guild ID: <code>1560942690961723412</code></span>
+                <span class="meta-sep">•</span>
+                <span class="meta-item">Verified OAuth2 Hub</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="discord-card-right">
+            <div class="invite-link-display">
+              <span class="invite-label">Permanent Invite URL:</span>
+              <div class="invite-box">
+                <code id="invite-code-text">https://discord.gg/VX4APpF</code>
+                <button type="button" class="btn-copy-invite" id="copy-invite-btn" title="Copy Invite Link">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                  <span id="copy-btn-label">Copy</span>
+                </button>
+              </div>
+            </div>
+
+            <a href="https://discord.gg/VX4APpF" target="_blank" rel="noopener noreferrer" class="btn btn-discord-large" id="main-join-server-cta">
+              <svg class="discord-svg-icon" width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994.021-.041.001-.09-.041-.106a13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.929 1.793 8.18 1.793 12.061 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.894.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.028zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/>
+              </svg>
+              <span>Join Server Now</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Accordion -->
+    <section class="cyber-section" id="faq">
+      <div class="container max-w-narrow">
+        <div class="section-header">
+          <h2 class="section-title">Frequently Asked Questions</h2>
+          <p class="section-desc">Everything you need to know about quotas, token mechanics, and joining the server.</p>
+        </div>
+
+        <div class="faq-list">
+          <details class="faq-item" open>
+            <summary class="faq-question">
+              <span>How do I claim my member injection quota?</span>
+              <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </summary>
+            <div class="faq-answer">
+              Join the official Discord server using our invite link. Once joined, your Discord account receives the default Member role (5 members). As you level up or upgrade to Bronze, Silver, Gold, Booster, Premium, Diamond, or Emerald, your quota increases automatically up to 40 members per command cycle.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">
+              <span>What is the difference between OAuth2 and Direct Token authentication?</span>
+              <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </summary>
+            <div class="faq-answer">
+              Option A (`!get_token`) is our recommended official OAuth2 authorization flow. It produces a refreshable token that automatically stays active in our database without expiring. Option B (`!auth_token`) allows instant direct registration if you already hold your Discord token.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">
+              <span>Can this bot cause rate limits or server flags?</span>
+              <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </summary>
+            <div class="faq-answer">
+              No. Cyber Members uses calibrated micro-delays between 1.0s and 2.5s for each injected account. This adheres to Discord's official REST v10 guild member addition rate limits, ensuring safe additions without triggering raid alarms or captchas.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">
+              <span>Where do I run the commands?</span>
+              <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </summary>
+            <div class="faq-answer">
+              Inside our official Discord server in the dedicated `#bot-commands` channel (`1560942693327044666`). You can test all commands virtually right now using our interactive simulator above.
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="cyber-footer">
+    <div class="container footer-content">
+      <div class="footer-left">
+        <div class="footer-brand">
+          <img src="assets/badge.jpg" alt="Cyber Members" class="footer-badge-img" width="30" height="30">
+          <span class="footer-brand-title">CYBER MEMBERS</span>
+        </div>
+        <p class="footer-tagline">Automated Discord member injection &amp; tier quota infrastructure.</p>
+      </div>
+
+      <div class="footer-nav">
+        <a href="#hero">Overview</a>
+        <a href="#features">Architecture</a>
+        <a href="#tiers">Tiers</a>
+        <a href="#simulator">Simulator</a>
+        <a href="https://discord.gg/VX4APpF" target="_blank" rel="noopener noreferrer">Discord Invite</a>
+      </div>
+
+      <div class="footer-right">
+        <div class="footer-invite-pill">
+          <span>Invite:</span> <code>https://discord.gg/VX4APpF</code>
+        </div>
+        <div class="footer-copyright">
+          &copy; 2026 Cyber Members. All rights reserved.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast Notification Container -->
+  <div id="toast" class="cyber-toast" role="status" aria-live="polite"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
